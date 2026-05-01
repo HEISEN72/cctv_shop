@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h3 class="mb-3">Регистрация</h3>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label>Логин</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Пароль</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Зарегистрироваться</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
